@@ -6,7 +6,6 @@ import NavigationRouter from '../Navigation/NavigationRouter'
 import { connect } from 'react-redux'
 import StartupActions from '../Redux/StartupRedux'
 import ReduxPersist from '../Config/ReduxPersist'
-import TabBar from '../Navigation/TabBar'
 // Styles
 import styles from './Styles/RootContainerStyle'
 

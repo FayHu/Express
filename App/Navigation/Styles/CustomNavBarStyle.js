@@ -9,14 +9,14 @@ export default {
     height: Metrics.navBarHeight,
     paddingTop: Metrics.smallMargin,
     paddingHorizontal: 5,
-    backgroundColor: Colors.background,
+    backgroundColor: Colors.primary,
     flexDirection: 'row',
     justifyContent: 'space-between'
   },
   title: {
     flex: 1,
     textAlign: 'center',
-    color: Colors.snow,
+    color: Colors.white,
     marginTop: Metrics.doubleBaseMargin,
     backgroundColor: Colors.transparent,
     fontWeight: 'bold',

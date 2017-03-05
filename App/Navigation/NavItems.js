@@ -4,7 +4,7 @@ import React from 'react'
 import { TouchableOpacity } from 'react-native'
 import styles from './Styles/NavItemsStyle'
 import { Actions as NavigationActions } from 'react-native-router-flux'
-import Icon from 'react-native-vector-icons/FontAwesome'
+import Icon from 'react-native-vector-icons/Ionicons'
 import { Colors, Metrics } from '../Themes'
 
 const openDrawer = () => {
@@ -20,7 +20,7 @@ export default {
       <TouchableOpacity onPress={NavigationActions.pop}>
         <Icon name='angle-left'
           size={Metrics.icons.large}
-          color={Colors.snow}
+          color={Colors.white}
           style={styles.backButton}
         />
       </TouchableOpacity>
@@ -30,9 +30,9 @@ export default {
   hamburgerButton () {
     return (
       <TouchableOpacity onPress={openDrawer}>
-        <Icon name='reorder'
+        <Icon name='ios-menu'
           size={Metrics.icons.small}
-          color={Colors.snow}
+          color={Colors.white}
           style={styles.navButtonLeft}
         />
       </TouchableOpacity>
@@ -44,7 +44,7 @@ export default {
       <TouchableOpacity onPress={callback}>
         <Icon name='search'
           size={Metrics.icons.small}
-          color={Colors.snow}
+          color={Colors.white}
           style={styles.searchButton}
         />
       </TouchableOpacity>

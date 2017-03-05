@@ -9,6 +9,12 @@ const navButton = {
 }
 
 export default StyleSheet.create({
+  leftButton: {
+    ...navButton,
+    marginTop: Metrics.baseMargin,
+    marginLeft: Metrics.baseMargin,
+    alignItems: 'center'
+  },
   backButton: {
     ...navButton,
     marginTop: Metrics.baseMargin,

@@ -1,24 +1,25 @@
 // @flow
 
-import React, { PropTypes, Component } from 'react'
+import React, {PropTypes, Component} from 'react'
 import Drawer from 'react-native-drawer'
-import { DefaultRenderer, Actions as NavigationActions } from 'react-native-router-flux'
+import {DefaultRenderer, Actions as NavigationActions} from 'react-native-router-flux'
 import DrawerContent from '../Containers/DrawerContent'
-import { connect } from 'react-redux'
+import {connect} from 'react-redux'
 import Styles from './Styles/NavigationDrawerStyle'
 
 /* *******************
-* Documentation: https://github.com/root-two/react-native-drawer
-********************/
+ * Documentation: https://github.com/root-two/react-native-drawer
+ ********************/
 
 class NavigationDrawer extends Component {
-  render () {
+  render() {
     const state = this.props.navigationState
     const children = state.children
     return (
       <Drawer
         ref='navigation'
         type='displace'
+        captureGestures={true}
         open={state.open}
         onOpen={() => NavigationActions.refresh({key: state.key, open: true})}
         onClose={() => NavigationActions.refresh({key: state.key, open: false})}
@@ -30,10 +31,15 @@ class NavigationDrawer extends Component {
         negotiatePan
         tweenEasing='easeOutSine'
         tweenHandler={(ratio) => ({
-          mainOverlay: { backgroundColor:'rgba(0,0,0,'+(1-(2-ratio)/2) +')'}
+          mainOverlay: { backgroundColor:'rgba(0,0,0,'+ratio*0.6 +')'},
+          drawer:{
+            transform:[
+              {translateX:ratio === 0?0:(1-ratio)*200}
+            ]
+          }
         })}
       >
-        <DefaultRenderer navigationState={children[0]} onNavigate={this.props.onNavigate} />
+        <DefaultRenderer navigationState={children[0]} onNavigate={this.props.onNavigate}/>
       </Drawer>
     )
   }
@@ -44,13 +50,11 @@ NavigationDrawer.propTypes = {
 }
 
 const mapStateToProps = (state) => {
-  return {
-  }
+  return {}
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return {
-  }
+  return {}
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavigationDrawer)

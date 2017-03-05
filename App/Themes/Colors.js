@@ -1,26 +1,41 @@
 // @flow
 
+const colorBase = {
+  white:'white',
+  black: 'black',
+  red:'#d9534f',
+  orange:'#f0ad4e',
+  yellow:'#ffd500',
+  green:'#5cb85c',
+  blue:'#0275d8',
+  teal:'#5bc0de',
+  pink:'#ff5b77',
+  purple:'#613d7c'
+}
+
 const colors = {
-  background: 'rgb(0,136,145)',
-  dark:'#24292e',
-  clear: 'rgba(0,0,0,0)',
-  facebook: '#3b5998',
-  transparent: 'rgba(0,0,0,0)',
-  silver: '#F7F7F7',
-  steel: '#CCCCCC',
-  error: 'rgba(200, 0, 0, 0.8)',
-  ricePaper: 'rgba(255,255,255, 0.75)',
-  frost: '#D8D8D8',
-  cloud: 'rgba(200,200,200, 0.35)',
-  windowTint: 'rgba(0, 0, 0, 0.4)',
-  panther: '#161616',
-  charcoal: '#595959',
-  coal: '#2d2d2d',
-  bloodOrange: '#fb5f26',
-  snow: 'white',
-  ember: 'rgba(164, 0, 48, 0.5)',
-  fire: 'rgb(0,136,145)',
-  drawer: 'rgba(0, 0, 0, 0.55)'
+  default:'#36383c',
+  primary:'#21c494',
+  secondary:colorBase.gblue,
+
+  success:colorBase.green,
+  info:colorBase.teal,
+  warning:colorBase.orange,
+  danger:colorBase.red,
+  white:colorBase.white,
+  dark:colorBase.black,
+  emphasis:colorBase.yellow,
+  emphasisBg:colorBase.red,
+
+  clear:'rgba(0,0,0,0)',
+  panel:'#24292e',
+  tabNav:'#353938',
+
+  grayDark:'#292b2c',
+  gray:'#464a4c',
+  grayLight:'#636c72' ,
+  grayLighter:'#eceeef',
+  grayLightest:'#f7f7f9'
 }
 
 export default colors

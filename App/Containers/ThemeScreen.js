@@ -53,7 +53,7 @@ export default class ThemeScreen extends React.Component {
     return fontStyles.map((fontStyle) => this.renderStyle(fontStyle))
   }
   handlePressDevice = () => {
-    NavigationActions.login()
+    NavigationActions.interflow1_2()
   }
   render () {
     return (
